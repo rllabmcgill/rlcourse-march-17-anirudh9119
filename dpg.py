@@ -159,7 +159,9 @@ def preprocess_action(action, clip_range=20):
     action = np.clip(action, -clip_range, clip_range)
     return action
 
-
+#REF : http://pemami4911.github.io/blog/2016/08/21/ddpg-rl.html
+#https://github.com/openai/rllab/blob/master/rllab/algos/ddpg.py
+#REF:https://github.com/hans/rlcomp/issues/1
 def update_buffers(buffers, states, actions, rewards, states_next):
      R_states, R_actions, R_rewards, R_states_next = buffers
 
